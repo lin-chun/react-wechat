@@ -1,0 +1,107 @@
+{
+    "code": "000000",
+    "data": {
+        "assetList": {
+            "financeList": {
+                "currentList": [
+                    {
+                        "applyFrozen": "11000.00",
+                        "availableAmount": "52578.11",
+                        "categoryNo": "1200",
+                        "currentAmount": "68589.71",
+                        "ffProductId": "6C451ACF7B734FA4A99F91A08E9EDF6E",
+                        "possessionAsset": "57589.71",
+                        "productCode": "10000588",
+                        "productId": "10025081",
+                        "productName": "百年稳赢保",
+                        "productType": "10000018",
+                        "redeemDealing": "5011.60",
+                        "redeemFrozen": "5011.60",
+                        "tempId": "T100000005",
+                        "timeLimit": "5",
+                        "totalIncome": "589.71",
+                        "yesterdayIncome": "7.74"
+                    },
+                    {
+                        "applyFrozen": "4000.00",
+                        "availableAmount": "2.65",
+                        "categoryNo": "1200",
+                        "currentAmount": "5002.81",
+                        "ffProductId": "3C47847461881432E053C081140ACD96",
+                        "possessionAsset": "1002.81",
+                        "productCode": "10000523",
+                        "productId": "10017880",
+                        "productName": "长生鑫得益一号",
+                        "productType": "10000018",
+                        "redeemDealing": "1000.16",
+                        "redeemFrozen": "1000.16",
+                        "tempId": "T100000005",
+                        "timeLimit": "5",
+                        "totalIncome": "2.81",
+                        "yesterdayIncome": "0.16"
+                    },
+                    {
+                        "applyFrozen": "1000.00",
+                        "availableAmount": "0.00",
+                        "categoryNo": "1200",
+                        "currentAmount": "1000.00",
+                        "possessionAsset": "0",
+                        "productCode": "10000524",
+                        "productId": "10017920",
+                        "productName": "长生鑫得益三号",
+                        "productType": "10000018",
+                        "redeemDealing": "0.00",
+                        "redeemFrozen": "0.00",
+                        "timeLimit": "5",
+                        "totalIncome": "0.00",
+                        "yesterdayIncome": "0.00"
+                    }
+                ],
+                "currentTotalIncome": "592.52",
+                "currentYesterdayTotalIncome": "7.90",
+                "fixedList": [
+                    {
+                        "applyFrozen": "10000.00",
+                        "categoryNo": "1200",
+                        "currentAmount": "10000.00",
+                        "dateIncomeEnd": "2017-03-23 16:15:02",
+                        "dateIncomeStart": "2017-03-22 16:14:59",
+                        "expectYearYieldRate": "6.4",
+                        "expectedInterest": "0",
+                        "ffProductId": "AF2043305465488DB39E6BA79E570110",
+                        "incomeType": "01",
+                        "possessionAsset": "0.00",
+                        "productCode": "mxr080",
+                        "productId": "10030440",
+                        "productName": "套餐1.1标版-富盈15号-sit",
+                        "productType": "10000006",
+                        "redeemDate": "2017-03-28 16:15:02",
+                        "redeemFrozen": "0.00",
+                        "restDays": "7",
+                        "tempId": "T100000003",
+                        "timeLimit": "4",
+                        "totalIncome": "0"
+                    }
+                ],
+                "fundList":[
+                    {
+                        "productId":"111",
+                        "ffProductId":"222",
+                        "productCode":"290128",
+                        "productName":"国泰成长优选股票",
+                        "possessionAsset":"11111111",
+                        "yesterdayIncome":"44.56",
+                        "totalIncome":"23464",
+                        "tempId":"ewe21",
+                        "applyFrozen":"0",
+                        "redeemFrozen":"0"
+                    }
+                ],
+                "frozenAmount": "32011.76",
+                "totalPossessionAsset": "84592.52",
+                "winChnlId": "BZB01A"
+            }
+        }
+    },
+    "msg": "成功"
+}

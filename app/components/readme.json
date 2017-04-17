@@ -1,0 +1,10 @@
+{
+  "Dialog": "弹窗，用户提示Alert",
+  "Keyboard": "各种键盘",
+  "Loading": "加载中",
+  "Toast": "信息提示",
+  "Temp": "理财模板",
+  "BankList": "支持的银行列表",
+  "RuleDialog": "各种常用的规则弹窗",
+  "Cache": "公用数据处理Cache"
+}

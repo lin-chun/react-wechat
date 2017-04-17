@@ -1,0 +1,11 @@
+{
+  "code": "000000",
+  "msg": "交易成功",
+  "data": {
+    "custSignFlag": "N",
+    "customerNameCN": "钟渚华",
+    "accountNo": "6223926000000061575",
+    "openTime": "2017-03-09",
+    "mobileNo": "15914031197"
+  }
+}

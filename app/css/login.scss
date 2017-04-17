@@ -1,0 +1,280 @@
+@import '../components/scss/common.scss';
+@import './layout/base.scss';
+//======输入框圆角===========
+$border-radius:rem(15);
+html,
+body {
+  height: 100%;
+}
+
+.v-wxlogin {
+  .v-open {
+    min-height: 100vh;
+  }
+  margin: 0 auto;
+  padding: 0 rem(54);
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  .input-wrap,
+  .phone-wrap,
+  .btn {
+    width: 100%;
+    height: arem(8);
+    box-sizing: border-box;
+  }
+  .btn {
+    display: block;
+    line-height: arem(8);
+    margin: arem(6) auto;
+    text-align: center;
+    color: #fff;
+    font-size: rem(54);
+    background-color: $theme-low;
+    border-radius: $border-radius;
+  }
+  .btn-disable {
+    background-color: rgba(23, 115, 208, .5);
+    color: rgba(255, 255, 255, .3);
+  }
+  .input-wrap {
+    margin: arem(3) auto;
+    position: relative;
+  }
+  .placeholder {
+    color: $theme-font-info;
+    font-size: rem(48);
+    position: absolute;
+    left: rem(36);
+    top: rem(38);
+    @include prefix(transition, .3s ease);
+  }
+  //焦点在输入框中时加上在.placeholder后面加上placeholder-up
+  .placeholder-up {
+    top: rem(-25);
+    font-size: rem(33);
+    padding: 0 rem(18);
+    background-color: #fff;
+  }
+  .input {
+    width: 100%;
+    height: 100%;
+    line-height: 100%;
+    padding: rem(48) rem(36);
+    font-size: rem(48);
+    text-align: left;
+    border: 1px solid $theme-font-info;
+    border-radius: $border-radius;
+    box-sizing: border-box;
+  }
+  .pwd-input {
+    width: rem(868);
+    height: 100%;
+    box-sizing: border-box;
+  }
+  .setpwd-wrap,
+  .pwd-input-wrap,
+  .msg-input-wrap {
+    white-space: nowrap;
+    border: 1px solid $theme-font-info;
+    border-radius: $border-radius;
+  }
+  .msg-input {
+    width: rem(611);
+    border: none;
+  }
+  .img-code-input-wrap {
+    font-size: 0;
+  }
+  .msg-input-wrap::after,
+  .img-code-input-wrap::after {
+    content: '';
+    height: rem(69);
+    border-left: rem(3) solid $theme-input-bd;
+    position: absolute;
+    top: rem(38);
+    left: rem(611);
+  }
+  .img-code-input-wrap::after {
+    left: rem(750);
+  }
+  .verify-code {
+    width: rem(361);
+    height: 100%;
+    line-height: 100%;
+    color: $theme-font-info;
+    font-size: rem(48);
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    vertical-align: top;
+  }
+  .img-code-input {
+    width: rem(750);
+    height: 100%;
+    display: inline-block;
+    border: none;
+    box-sizing: border-box;
+  }
+  .img-verify-code {
+    display: inline-block;
+    width: rem(220);
+    height: 100%;
+    overflow: hidden;
+    vertical-align: top;
+  }
+  .img-code {
+    display: block;
+    width: rem(148);
+    height: rem(76);
+    margin: arem(1.9) arem(2);
+  }
+  .loading-icon {
+    width: 100%;
+    height: 100%;
+    background: url(../images/loading_icon.png) center center no-repeat;
+    background-size: rem(148) rem(76);
+    @include prefix(animation, loading-icon-rotate 1s linear infinite);
+  }
+  @include keyframes(loading-icon-rotate) {
+    from {
+      @include prefix(transform, rotate(0deg));
+    }
+    to {
+      @include prefix(transform, rotate(360deg));
+    }
+  }
+  .phone-wrap {
+    margin: arem(5) auto;
+    height: auto;
+    color: $theme-font-info;
+    font-size: rem(51);
+    text-align: center;
+    .phone {
+      padding-left: arem(2);
+    }
+  }
+  .clear-icon,
+  .clear-input {
+    width: rem(66);
+    height: rem(66);
+    position: absolute;
+    top: rem(36);
+    background: url(../images/login/close.png) left top no-repeat;
+    background-size: 100%;
+  }
+  .clear-input {
+    left: rem(766);
+  }
+  .clear-icon {
+    right: rem(36);
+  }
+  .switch-pwd {
+    width: rem(68);
+    height: rem(72);
+    position: absolute;
+    top: rem(36);
+    left: rem(868);
+    background: url(../images/login/eye.png) center center no-repeat;
+    background-size: 100%;
+  }
+  .pwd-show {
+    background-image: url(../images/login/inputbox_ic_eye.png);
+  }
+  .pwd-input-wrap {
+    margin: 0 auto;
+  }
+  .get-pwd {
+    margin: arem(2) auto 0;
+    color: $theme-low;
+    font-size: rem(39);
+    text-align: right;
+  }
+  .reset-mask {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 9;
+  }
+  .tip-wrap {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: arem(5) arem(7) arem(6);
+    background-color: #fff;
+    box-sizing: border-box;
+    z-index: 10;
+    @include prefixv(transform, translate(0, 100%));
+    @include prefix(transition, .5s ease);
+    .tip {
+      margin-bottom: arem(6);
+      color: #111;
+      font-size: rem(48);
+      text-align: center;
+    }
+    .btn {
+      width: arem(40);
+      margin: 0 auto;
+    }
+    .re-write {
+      margin-top: arem(4);
+      color: $theme-low;
+      border: 1px solid $theme-low;
+      background-color: transparent;
+    }
+  }
+  .tip-wrap-show {
+    @include prefixv(transform, translate(0, 0));
+  }
+  .setpwd-wrap {
+    margin-bottom: arem(1);
+  }
+  .setpwd-tip {
+    margin-left: rem(36);
+    color: $theme-font-info;
+    font-size: rem(39);
+  }
+  .unsel-icon {
+    display: inline-block;
+    width: rem(54);
+    height: rem(54);
+    border: rem(2) solid $theme-font-info;
+    border-radius: rem(5);
+    box-sizing: border-box;
+    vertical-align: middle;
+    @include prefix(transform, translateY(-2px));
+  }
+  .sel-icon {
+    border: none;
+    background: url(../images/login/select.png) left top no-repeat;
+    background-size: 100%;
+  }
+  .rule-tip {
+    padding: 0 0 0 rem(18);
+    color: $theme-font-info;
+    font-size: rem(39);
+  }
+  .rule-link {
+    font-size: rem(39);
+    color: $theme-low;
+  }
+  .input-f {
+    border: 1px solid $theme-low;
+  }
+  .pos-rel {
+    position: relative;
+  }
+  .bor-n {
+    border: none;
+  }
+  .clear-hid {
+    display: none;
+  }
+}
+
+.txt-r {
+  text-align: right;
+}

@@ -1,0 +1,177 @@
+@import '../components/scss/common.scss';
+@import './layout/base.scss';
+.v-risk {
+  $icon-file: rem(216);
+  text-align: center;
+  .file {
+    margin: arem(7) auto 0;
+    width: $icon-file;
+    height: $icon-file;
+    background-image: url(../images/icon-file.png);
+    background-size: 100%;
+  }
+  .title {
+    margin: arem(2) rem(80) arem(6);
+    overflow: hidden;
+    font-size: rem(54);
+    font-weight: 600;
+    color: $theme-font-deep;
+  }
+  .warn {
+    margin: 0 arem(3);
+    color: $theme-font-simple;
+    font-size: rem(42);
+    font-weight: 600;
+    span {
+      padding: 0 .25em;
+      color: $theme-font;
+    }
+    span.risk-level {
+      color: $theme-low;
+    }
+  }
+  .overwarn-mess {
+    padding-top: arem(2);
+  }
+  // 首页底部
+  .bottom {
+    position: fixed;
+    width: 100%;
+    bottom: arem(15);
+    // 结果底部
+    &.bottom-result {
+      bottom: 0;
+      height: rem(414);
+    }
+    .mess {
+      padding: arem(3);
+      line-height: rem(59);
+      font-size: rem(39);
+      color: $theme-font-info;
+    }
+    .button {
+      width: 100%;
+      padding: 0 arem(3);
+      @include border-box;
+      button.button-bg {
+        width: 100%;
+        @include theme-btn;
+      }
+      button.button-bd {
+        margin-top: arem(2);
+        width: 100%;
+        border: 0 !important;
+        background-color: transparent !important;
+        @include theme-btn-bd;
+      }
+      button.button-bg:active {
+        @include theme-btn-active;
+      }
+    }
+  }
+  // 结果
+  .result {
+    padding-top: arem(2);
+    padding-bottom: arem(2);
+    color: $theme-deep;
+    font-size: rem(72);
+  }
+  .overwarn {
+    display: block;
+    margin: arem(2) 0;
+    padding: 0;
+  }
+  span.overwarn {
+    color: $theme-font-warn;    
+  }
+}
+
+.v-risk-answer {
+  // .weui-cell {
+  //   padding: 0;
+  // }
+  // .weui-cells {
+  //   margin-top: 0;
+  // }
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  background-color: $theme-bg-grey;
+  @include border-box;
+  $pd: arem(3);
+  .title {
+    padding: $pd $pd arem(2) $pd;
+    line-height: $pd;
+    font-weight: 600;
+    font-size: rem(48);
+    color: $theme-font-deep;
+  }
+  // .answer {
+  //   padding: $pd 0 $pd $pd;
+  //   line-height: rem(56);
+  //   font-size: rem(44);
+  //   color: $theme-font-simple;
+  // }
+  .answers {
+    background-color: #fff;
+  }
+  .answer {
+    position: relative;
+    &:last-child {
+      border-bottom: 0;
+    }
+    margin-left: $pd;
+    padding: $pd $pd $pd arem(5);
+    line-height: $pd;
+    font-size: rem(48);
+    color: $theme-font-simple;
+    border-bottom: 1px solid $theme-border;
+  }
+  .answer.choose {
+    .radio {
+      background-position-x: -$pd;
+    }
+  }
+  .radio {
+    position: absolute;
+    left: arem(.5);
+    display: block;
+    width: $pd;
+    height: $pd;
+    background: url(../images/icon-radio.png) no-repeat;
+    background-size: rem(110) $pd;
+  }
+  .bottom {
+    padding: $pd;
+    font-size: rem(39);
+    @include flex-parent;
+    > div {
+      @include flex;
+      color: $theme-font-simple;
+    }
+    >div:nth-child(2) {
+      text-align: center;
+    }
+    > div:first-child {
+      text-align: left;
+      color: $theme-low;
+    }
+    > div:last-child {
+      text-align: right;
+      color: $theme-low;
+    }
+  }
+  .button {
+    padding: rem(108) rem(56) 0;
+    button {
+      width: 100%;
+      @include theme-btn;
+    }
+  }
+  .none {
+    font-size: rem(56);
+    text-align: center;
+  }
+}

@@ -1,0 +1,35 @@
+/*下方拉出弹窗组件*/
+@import '../scss/common.scss';
+
+.popup-title {
+	width: 100%;
+	text-align: center;
+	font-size: 3*$font-size;
+	padding-top: 4*$font-size;
+	color: $theme-font;
+}
+.popup-content {
+	text-align: center;
+	font-size: rem(42);
+	color: $theme-font-simple;
+	padding-bottom: $font-size;
+}
+.popupPage .weui-popup {
+	background: #fff!important;
+}
+.popup-open {
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	@include theme-btn;
+	width: 40*$font-size;
+}
+.popup-close {
+	width: 40*$font-size;
+	margin: 0 auto;
+	text-align:center;
+	@include theme-btn-bd;
+	margin-top: 3*$font-size;
+	margin-bottom: 4*$font-size;
+}
+

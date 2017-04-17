@@ -1,0 +1,358 @@
+@import '../scss/common.scss';
+.c-keyboard-weui {
+  .sec {
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  }
+  .weui-mask {
+    height: 0;
+    background-color: transparent;
+  }
+  &.shadow {
+    .weui-mask {
+      height: 100vh;
+      @include dialog-shadow;
+    }
+  }
+  &.events {
+    .weui-popup {
+      pointer-events: none;
+    }
+  }
+  .mask {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+  }
+  .weui-popup {
+    height: 100vh;
+    background-color: transparent;
+  }
+  .board-main {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background-color: #fff;
+    font-size: rem(52);
+    pointer-events: visible;
+  }
+}
+
+$bd: 1px solid $theme-row-bd;
+$pd: rem(50);
+// 组件间距
+$sec-mg: rem(86);
+$active-color: #d0d5db;
+// 键盘格高度
+$height: rem(148);
+// 键盘按键
+.c-keyboard {
+  .back {
+    margin-top: rem(33);
+    display: inline-block;
+    width: rem(80);
+    height: rem(80);
+    background-image: url(./back.png);
+    background-size: rem(80) rem(80);
+    background-repeat: no-repeat;
+    opacity: .7;
+  }
+  &.keynine {
+    .main {
+      >.sec {
+        width: 100% !important;
+      }
+    }
+    .button {
+      display: none;
+    }
+  }
+  &.unsafe {
+    .main {
+      .flex-1:active {
+        background-color: $active-color;
+      }
+    }
+  }
+  .main {
+    // position: fixed;
+    // bottom: 0;
+    width: 100%;
+    float: left;
+    // 键盘模块
+    >.sec {
+      width: 75%;
+      float: left;
+      border-top: $bd;
+      .flex {
+        height: $height;
+        line-height: $height;
+        text-align: center;
+        @include border-box;
+        @include flex-parent;
+        .flex-1 {
+          height: 100%;
+          border-right: $bd;
+          border-bottom: $bd;
+          overflow: hidden;
+          @include flex;
+        }
+        .flex-1:last-of-type {
+          border-right: 0;
+        }
+      }
+      .flex:last-of-type {
+        .flex-1 {
+          border-bottom: 0;
+        }
+      }
+    }
+    // 键盘按钮块
+    >.button {
+      width: 25%;
+      float: left;
+      border-top: $bd;
+      @include border-box;
+      > div,
+      > button {
+        display: block;
+        width: 100%;
+        border-left: $bd;
+        height: $height * 2;
+        line-height: $height * 2;
+        background-color: #fff;
+        text-align: center;
+        font-size: rem(52);
+      }
+      .button-back:active {
+        background-color: $active-color;
+      }
+      .button-ok {
+        background-color: $theme-low;
+        color: #fff;
+      }
+      .button-ok.disabled {
+        background-color: $active-color;
+      }
+    }
+  }
+}
+
+// otp 模块
+.c-keyboard-opt {
+  padding: $pd;
+  padding-top: 0;
+  // 顶部
+  >.title {
+    position: relative;
+    padding: 0 $pd;
+    height: rem(122);
+    line-height: rem(122);
+    border-top: $bd;
+    text-align: center;
+    overflow: hidden;
+    > span {
+      position: absolute;
+      left: 0;
+      font-size: rem(34);
+      color: $theme-font-info;
+    }
+  }
+  .input {
+    .input-value:empty:after {
+      content: '短信验证码';
+      color: $theme-font-info;
+    }
+    position: relative;
+    width: 100%;
+    padding: 0 rem(30);
+    margin-top: rem(30);
+    height: rem(144);
+    line-height: rem(144);
+    border: 1px solid $theme-db;
+    border-radius: rem(12);
+    font-size: rem(48);
+    @include border-box;
+    .input-holder {
+      position: absolute;
+      height: rem(72);
+      line-height: rem(72);
+      top: rem(-38);
+      margin-left: rem(-10);
+      padding: 0 rem(20);
+      background-color: #fff;
+      font-size: rem(30);
+      color: $theme-font-info;
+    }
+    .input-holder:after {
+      content: '短信验证码';
+    }
+    .input-value:empty + .icon-clear {
+      display: none;
+    }
+    .icon-clear {
+      right: rem(380);
+    }
+    .input-button {
+      position: absolute;
+      top: rem((144-52)*.5);
+      right: 0;
+      width: rem(340);
+      line-height: rem(52);
+      border-left: 1px solid $theme-db;
+      text-align: center;
+      background: #fff;
+    }
+    .input-button:disabled {
+      color: $theme-font-info;
+    }
+  }
+  .mess {
+    text-align: center;
+    padding-bottom: rem(10);
+    font-size: rem(42);
+    color: $theme-font-info;
+    overflow: hidden;
+  }
+  .mess.error {
+    color: $theme-font-error;
+  }
+}
+
+// 安全键盘
+.c-keyboard-pay {
+  background-color: #fff !important;
+  .otp-cancel {
+    font-size: rem(48);
+    color: $theme-font-simple;
+  }
+  .content {
+    margin: arem(3) auto;
+    text-align: center;
+    width: 90%;
+  }
+  .title {
+    font-size: rem(54);
+  }
+  .sec-tit {
+    font-size: rem(54);
+    color: $theme-font-deep;
+    text-align: center;
+  }
+  .loading {
+    font-size: rem(42);
+    text-align: center;
+    height: rem(42);
+    color: $theme-font-simple;
+  }
+  .weui-loadmore {
+    width: 100%!important;
+    margin: 0!important;
+  }
+  .warn {
+    font-size: rem(42);
+    color: $theme-font-error;
+    text-align: center;
+  }
+  .content span {
+    width: 1.4600rem;
+    height: 1.3rem;
+    line-height: 1.3rem;
+    @extend flex-1 !optional;
+    position: relative;
+    display: inline-block;
+  }
+  .content span:after {
+    content: ' ';
+    position: absolute;
+    height: 2.6rem;
+    border-left: 1px solid #D9D9D9;
+    color: #D9D9D9;
+    -webkit-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+    -webkit-transform: scaleY(0.5);
+    transform: scale(0.5);
+    display: inline-block;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 200%;
+    border-top: 1px solid #D9D9D9;
+    border-bottom: 1px solid #D9D9D9;
+  }
+  .content span:last-child:after {
+    border-right: 1px solid #D9D9D9;
+    border-radius: 0 6px 6px 0;
+  }
+  .content span:first-child:after {
+    border-radius: 6px 0 0 6px;
+  }
+  .forget {
+    width: 90%;
+    margin: 0 auto 10px;
+    font-size: rem(39);
+    text-align: right;
+    color: #1773d0;
+  }
+  .dot {
+    border: 0.16rem solid;
+    background-color: #000;
+    display: inline-block;
+    border-radius: 50%;
+    position: absolute;
+    top: .54rem;
+    left: 0.6rem;
+  }
+}
+
+// 交易键盘
+.c-keyboard-tran {
+  .sell-title {
+    color: $theme-font-deep;
+    font-size: 3*$font-size;
+    text-align: center;
+    padding: 3*$font-size 0 5*$font-size;
+    position: relative;
+    span {
+      display: inline-block;
+      color: $theme-font-simple;
+      font-size: rem(48);
+      position: absolute;
+      left: 2*$font-size;
+      top: 3*$font-size;
+    }
+  }
+  .sell-money {
+    text-align: center;
+    font-size: 3*$font-size;
+    color: $theme-font-deep;
+    position: relative;
+    span {
+      display: inline-block;
+      color: #526C98;
+      font-size: rem(48);
+      line-height: 5*$font-size;
+      position: absolute;
+      right: 2*$font-size;
+      top: 0;
+    }
+  }
+  .sell-accountTime {
+    padding: 2*$font-size 0 4*$font-size 0;
+    font-size: rem(42);
+    height: rem(46);
+    color: $theme-font-simple;
+    text-align: center;
+  }
+  .recommend {
+    margin: 0 3*$font-size rem(80);
+    border: 0.5px solid $theme-font-info;
+    border-radius: rem(15);
+    padding-left: 3*$font-size;
+    .num {
+      display: inline-block;
+      height: rem(145);
+      font-size: rem(48);
+    }
+  }
+}

@@ -1,0 +1,143 @@
+@import '../components/scss/common.scss';
+@import './layout/base.scss';
+// 实名认证
+.v-open {
+  $pd: arem(3);
+  .idcard {
+    padding: $pd $pd 0;
+    @include border-box;
+    .input-main {
+      position: relative;
+      padding-right: rem(80);
+    }
+    .input {
+      position: relative;
+      padding: 0 rem(20);
+      height: arem(9);
+      line-height: arem(9);
+      margin-bottom: $pd;
+      width: 100%;
+      border-radius: rem(12);
+      border: 1px solid $theme-input-bd;
+      font-size: rem(38);
+      input {
+        padding-top: arem(2);
+        padding-bottom: arem(2);
+        vertical-align: 1px;
+        border: 0;
+        font-size: rem(38);
+      }
+      @include border-box;
+    }
+    .input-id {
+      margin-right: rem(100);
+    }
+    .input-id:empty:after {
+      content: '18位身份证号码';
+      color: $theme-font-info;
+    }
+    .button {
+      width: 100%;
+      margin-top: $pd;
+      @include theme-btn;
+    }
+    .button:disabled {
+      @include theme-btn-disabled;
+    }
+  }
+}
+
+// 绑卡
+.v-open {
+  min-height: 100vh;
+  .index {
+    padding: rem(50);
+    .title {
+      font-size: rem(54);
+      color: $theme-font-deep;
+    }
+    .mobile-mess {
+      padding-top: rem(18);
+      font-size: rem(33);
+      color: $theme-low;
+    }
+    .input {
+      .input-value:empty:after {
+        content: '卡号';
+        color: $theme-font-info;
+      }
+      // .input-value:empty + .icon-clear {
+      //   display: none;
+      // }
+      // .input-value + .icon-clear {
+      //   top: rem(40);
+      // }
+      position: relative;
+      width: 100%;
+      margin-top: rem(120);
+      padding: 0 rem(20);
+      height: arem(8.5);
+      line-height: arem(8.5);
+      border: 1px solid $theme-input-bd;
+      border-radius: rem(12);
+      font-size: rem(48);
+      @include border-box;
+      .input-holder {
+        position: absolute;
+        height: rem(72);
+        line-height: rem(72);
+        top: rem(-38);
+        margin-left: rem(-10);
+        padding: 0 rem(20);
+        background-color: #fff;
+        font-size: rem(30);
+        color: $theme-font-info;
+      }
+      .input-holder:after {
+        content: '卡号';
+      }
+    }
+    .bank-list {
+      .link {
+        padding: arem(1) 0;
+        font-size: rem(39);
+        color: $theme-low;
+      }
+      .memo {
+        font-size: rem(30);
+        color: $theme-font-lower;
+      }
+    }
+    .buttons {
+      margin-top: rem(180);
+      .memo {
+        font-size: rem(33);
+        color: $theme-font-lower;
+        text-align: center;
+        span {
+          color: $theme-lower;
+        }
+      }
+      button {
+        margin-top: rem(40);
+        @include theme-btn;
+      }
+      button:disabled {
+        @include theme-btn-disabled;
+      }
+    }
+  }
+}
+
+// 公用
+.v-open {
+  .dialog {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    z-index: $z-dialog;
+  }
+}

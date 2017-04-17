@@ -1,0 +1,32 @@
+/* 收益明细 */
+
+@import '../../components/scss/common.scss';
+@import '../layout/base.scss';
+.v-earn {
+  min-height: 100vh;
+  background: $theme-part-bg;
+  .earn {
+    background: #fff;
+    padding: 4*$font-size 0;
+    border-bottom: 0.5px solid $theme-border;
+    .top {
+      margin: 0;
+      text-align: center;
+      font-size: $small-font;
+      color: $theme-font-simple;
+    }
+    .total {
+      text-align: center;
+      font-size: rem(114);
+      color: #E64340;
+    }
+  }
+  .list {
+    padding: 3*$font-size!important;
+    font-size: rem(48);
+    color: $theme-font-deep!important;
+    .weui-cell__ft {
+      color: $theme-font-deep!important;
+    }
+  }
+}
