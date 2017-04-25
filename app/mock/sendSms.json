@@ -1,8 +1,0 @@
-{
-  "code": "000000",
-  "msg": "success",
-  "data": {
-    "smsFlag": 123456,
-    "smsCheckTimeOut": 60
-  }
-}

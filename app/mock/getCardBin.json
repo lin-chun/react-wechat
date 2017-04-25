@@ -1,9 +1,0 @@
-{
-  "code": "000000",
-  "msg": "success",
-  "data": {
-    "bankCode": "00085",
-    "bankName": "招商银行",
-    "otherBankFlag": "1"
-  }
-}

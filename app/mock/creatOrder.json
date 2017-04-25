@@ -1,9 +1,0 @@
-{
-  "code": "000000",
-  "msg": "success",
-  "data": {
-  	"payOrderNo": "10425910",
-  	"orderCreateTime": "2016-7-15",
-  	"orderAmount": "20000"
-  }
-}
